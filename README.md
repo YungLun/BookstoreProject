@@ -71,4 +71,3 @@ Workflow 3: Refund or Payment Adjustment
 3.QuantityInStock and ReorderLevel cannot be less than zero
 4.PaymentStatus limited to ('Pending','Paid','Refunded').
 5.ReceivedDate must be after OrderDate.
-6.
