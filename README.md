@@ -32,15 +32,13 @@ Bookstore Management System can do:
 7.Manage customer orders and payments
 
 #Schema overview：
-Table Name:
-1.Supplier:Stores information about book suppliers and their contact details.
-2.Book:Represents all books available in the store, including author, publisher, price, and supplier.
-3.Inventory:Tracks the current stock quantity, reorder level, and restock date of each book.
-4.Customer:Contains customer information such as contact details and membership date.
-5.SalesOrder:Header table for customer purchase transactions.
-6.SalesOrderLine:Detail table for each book sold in an order. Automatically calculates line total (Quantity * UnitPrice).
-7.PurchaseOrder:Records purchase transactions made to suppliers for restocking purposes.
-
+1. Suppliers: Stores information about book suppliers and their contact information.
+2. Books: Represents all books available in the bookstore, including author, publisher, price, and supplier.
+3. Inventory: Tracks each book's current inventory quantity, reorder level, and restocking date.
+4. Customers: Contains customer information, such as contact information and membership history.
+5. Sales Orders: A header table for customer purchase transactions.
+6. Sales Order Lines: A detailed table for each book sold in an order. Line totals (quantity * unit price) are automatically calculated.
+7. Purchase Orders: Records purchase transactions with suppliers for replenishment purposes.
 
 #User Roles and Operations
 1.Admin:
