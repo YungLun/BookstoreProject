@@ -5,11 +5,12 @@
 -Github Name:rogueflick22
 2.Yung-Lun Lee
 -Role:Logic Developer
--Student ID: n01740036
+-Student ID: n01721599
 -Github Name:YungLun
--Schema Designer
--Student ID: n01740036
--Github Name:
+3.Yi-Chun Lien
+-Role:Security & Optimization Lead
+-Student ID: n01745009
+-Github Name:AllisonLien
 
 #Overview:
 The Bookstore Management System is designed to handle all core operations for a small-to-medium retail bookstoreI.
@@ -26,6 +27,20 @@ Bookstore Management System can do:
 2.Enforcing referential integrity through foreign keys
 3.Automating updates using triggers and stored procedures
 4.Enabling secure, role-based access for different staff groups
+5.Maintain accurate book and supplier records  
+6.Track inventory and automatically trigger restocking  
+7.Manage customer orders and payments
+
+#Schema overview：
+Table Name:
+1.Supplier:Stores information about book suppliers and their contact details.
+2.Book:Represents all books available in the store, including author, publisher, price, and supplier.
+3.Inventory:Tracks the current stock quantity, reorder level, and restock date of each book.
+4.Customer:Contains customer information such as contact details and membership date.
+5.SalesOrder:Header table for customer purchase transactions.
+6.SalesOrderLine:Detail table for each book sold in an order. Automatically calculates line total (Quantity * UnitPrice).
+7.PurchaseOrder:Records purchase transactions made to suppliers for restocking purposes.
+
 
 #User Roles and Operations
 1.Admin:
