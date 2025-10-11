@@ -42,21 +42,21 @@ Bookstore Management System can do:
 
 #User Roles and Operations
 1.Admin:
-- Create / update roles and permissions
-- Manage backups and indexing
-- Audit transactions
+-Create / update roles and permissions
+-Manage backups and indexing
+-Audit transactions
 2.Manager:
-- Approve purchase orders
-- Review sales reports and stock levels
-- Authorize discounts or refunds
+-Approve purchase orders
+-Review sales reports and stock levels
+-Authorize discounts or refunds
 3.Clerk:
-- Create new customer records
-- Process sales orders and payments
-- Update inventory after sales
+-Create new customer records
+-Process sales orders and payments
+-Update inventory after sales
 4.Customer:
-- View book catalog
-- Check order status
-- Request refund or return
+-View book catalog
+-Check order status
+-Request refund or return
 
 #Business Workflows:
 Workflow 1: Customer Purchase Transaction
