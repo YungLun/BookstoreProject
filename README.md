@@ -3,11 +3,11 @@
 -Role:Schema Designer
 -Student ID: n01740036
 -Github Name:rogueflick22
-2.Yung-Lun Lee
+#2.Yung-Lun Lee
 -Role:Logic Developer
 -Student ID: n01721599
 -Github Name:YungLun
-3.Yi-Chun Lien
+#3.Yi-Chun Lien
 -Role:Security & Optimization Lead
 -Student ID: n01745009
 -Github Name:AllisonLien
