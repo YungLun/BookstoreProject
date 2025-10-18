@@ -307,3 +307,12 @@ EXEC sp_help 'dbo.Book';
 
 GO
 
+
+/*update dbo.SalesOrder totalAMount*/
+UPDATE so
+SET TotalAmount = (
+    SELECT SUM(LineTotal)
+    FROM dbo.SalesOrderLine sol
+    WHERE sol.OrderID = so.OrderID
+)
+FROM dbo.SalesOrder so;
