@@ -144,7 +144,7 @@ USE BookstoreDB;
 GO
 
 /* ============================================================
-   Phase I: Generate Test Data for BookstoreDB
+   INSERT data to Table
    ============================================================ */
 
 /* -----------------------
@@ -162,7 +162,7 @@ GO
 /* -----------------------
    2. Book
 -------------------------*/
--- ®C≠”®—¿≥∞” 4°V6 •ªÆ—
+-- ÊØèÂÄã‰æõÊáâÂïÜ 4‚Äì6 Êú¨Êõ∏
 INSERT INTO dbo.Book (ISBN, Title, Author, Publisher, PublishYear, Genre, UnitPrice, SupplierID)
 VALUES
 ('978-0-001', 'SQL Basics', 'John Doe', 'Global Books', 2020, 'Technology', 29.99, 1),
@@ -205,7 +205,7 @@ GO
 /* -----------------------
    5. SalesOrder
 -------------------------*/
--- ®C≠”´»§· 1°V3 µß≠q≥Ê
+-- ÊØèÂÄãÂÆ¢Êà∂ 1‚Äì3 Á≠ÜË®ÇÂñÆ
 DECLARE @CustomerID INT;
 DECLARE @OrderCount INT;
 DECLARE CustomerCursor CURSOR FOR SELECT CustomerID FROM dbo.Customer;
@@ -236,7 +236,7 @@ GO
 /* -----------------------
    6. SalesOrderLine
 -------------------------*/
--- ®Cµß≠q≥Ê¿Hæ˜ 1°V5 •ªÆ—
+-- ÊØèÁ≠ÜË®ÇÂñÆÈö®Ê©ü 1‚Äì5 Êú¨Êõ∏
 DECLARE @OrderID INT, @BookCount INT, @BookID INT, @UnitPrice DECIMAL(10,2);
 
 DECLARE OrderCursor CURSOR FOR
@@ -247,7 +247,7 @@ FETCH NEXT FROM OrderCursor INTO @OrderID;
 
 WHILE @@FETCH_STATUS = 0
 BEGIN
-    SET @BookCount = FLOOR(RAND(CHECKSUM(NEWID()))*5) + 1;  -- 1°V5 •ªÆ—
+    SET @BookCount = FLOOR(RAND(CHECKSUM(NEWID()))*5) + 1;  -- 1‚Äì5 Êú¨Êõ∏
     DECLARE @i INT = 1;
     WHILE @i <= @BookCount
     BEGIN
@@ -270,7 +270,7 @@ GO
 /* -----------------------
    7. PurchaseOrder
 -------------------------*/
--- ®C≠”®—¿≥∞” 1°V4 µß±ƒ¡ ≥Ê
+-- ÊØèÂÄã‰æõÊáâÂïÜ 1‚Äì4 Á≠ÜÊé°Ë≥ºÂñÆ
 DECLARE @SupplierID INT;
 DECLARE SupplierCursor CURSOR FOR
 SELECT SupplierID FROM dbo.Supplier;
@@ -304,4 +304,5 @@ GO
 
 
 EXEC sp_help 'dbo.Book';
+
 GO
