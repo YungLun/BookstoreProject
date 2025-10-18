@@ -132,7 +132,7 @@ CREATE TABLE dbo.PurchaseOrder (
 GO
 
 /* ============================================================
-   INDEXING STRATEGY (Phase I baseline)
+   INDEXING STRATEGY
    ============================================================ */
 CREATE NONCLUSTERED INDEX IX_Inventory_BookID ON dbo.Inventory(BookID);
 CREATE NONCLUSTERED INDEX IX_SalesOrder_Cust  ON dbo.SalesOrder(CustomerID);
@@ -306,3 +306,4 @@ GO
 EXEC sp_help 'dbo.Book';
 
 GO
+
