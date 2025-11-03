@@ -66,6 +66,22 @@ Workflow 3: Refund or Payment Adjustment
 #Business Rules:
 1.Cannot insert a Book without valid SupplierID.
 2.QuantityInStock and ReorderLevel must be non-negative.
-3.QuantityInStock and ReorderLevel cannot be less than zero
-4.PaymentStatus limited to ('Pending','Paid','Refunded').
-5.ReceivedDate must be after OrderDate.
+3.PaymentStatus limited to ('Pending', 'Paid', 'Refunded').
+4.ReceivedDate must be after OrderDate.
+5.Each ISBN must be unique.
+6.Books cannot be deleted once created.
+7.When a SalesOrderLine is added, inventory quantity must update automatically.
+8.Oder TotalAmount must always equal the sum of its line items.
+9.Discounted price must be calculated consistently for reporting and promotion.
+10.All purchase and sales transactions must use BEGIN...COMMIT/ROLLBACK to ensure atomicity and data consistency.
+
+#How to run locally
+1.Open SQL Server Management Studio
+2.Run the setup scripts in order:
+(1.)schema/CreateAndInsertTestData.sql – create all tables and insert sample data
+(2.)functions/ – create functions
+(3.)procedures/ – create stored procedures
+(4.)triggers/ – create triggers
+(5.) views/ – create views
+(6.)security/roles_permissions.sql – set roles and permissions
+(7.)test_cases.sql to verify transactions, triggers, and error handling.
