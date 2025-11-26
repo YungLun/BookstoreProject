@@ -20,8 +20,8 @@ Everything revolves around books as the main product and connects suppliers (who
 ## Problem Domain:
 Traditional bookstores often maintain inventory and supplier data manually, leading to:  
 1.Inconsistent stock information and delayed restocking  
-2.Duplicate or incomplete order records  
-3.Poor coordination between sales, purchasing, and suppliers  
+2.Duplicate or incomplete order records    
+3.Poor coordination between sales, purchasing, and suppliers    
 **Bookstore Management System can do:**  
 1.Centralizing all operational data into one relational schema  
 2.Enforcing referential integrity through foreign keys  
@@ -41,22 +41,22 @@ Traditional bookstores often maintain inventory and supplier data manually, lead
 7.Purchase Orders: Records purchase transactions with suppliers for replenishment purposes.  
 
 ## User Roles and Operations  
-1.Admin:  
+1.Admin:    
 -Create / update roles and permissions
 -Manage backups and indexing
--Audit transactions
-2.Manager:  
+-Audit transactions  
+2.Manager:    
 -Approve purchase orders
 -Review sales reports and stock levels
--Authorize discounts or refunds
-3.Clerk:  
+-Authorize discounts or refunds  
+3.Clerk:    
 -Create new customer records
 -Process sales orders and payments
--Update inventory after sales
-4.Customer:  
+-Update inventory after sales  
+4.Customer:    
 -View book catalog
 -Check order status
--Request refund or return
+-Request refund or return  
 
 ## Business Workflows:  
 Workflow 1: Customer Purchase Transaction  
