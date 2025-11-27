@@ -162,7 +162,7 @@ GO
 /* -----------------------
    2. Book
 -------------------------*/
--- 每個供應商 4–6 本書
+
 INSERT INTO dbo.Book (ISBN, Title, Author, Publisher, PublishYear, Genre, UnitPrice, SupplierID)
 VALUES
 ('978-0-001', 'SQL Basics', 'John Doe', 'Global Books', 2020, 'Technology', 29.99, 1),
@@ -205,7 +205,7 @@ GO
 /* -----------------------
    5. SalesOrder
 -------------------------*/
--- 每個客戶 1–3 筆訂單
+
 DECLARE @CustomerID INT;
 DECLARE @OrderCount INT;
 DECLARE CustomerCursor CURSOR FOR SELECT CustomerID FROM dbo.Customer;
@@ -236,7 +236,7 @@ GO
 /* -----------------------
    6. SalesOrderLine
 -------------------------*/
--- 每筆訂單隨機 1–5 本書
+
 DECLARE @OrderID INT, @BookCount INT, @BookID INT, @UnitPrice DECIMAL(10,2);
 
 DECLARE OrderCursor CURSOR FOR
@@ -247,7 +247,7 @@ FETCH NEXT FROM OrderCursor INTO @OrderID;
 
 WHILE @@FETCH_STATUS = 0
 BEGIN
-    SET @BookCount = FLOOR(RAND(CHECKSUM(NEWID()))*5) + 1;  -- 1–5 本書
+    SET @BookCount = FLOOR(RAND(CHECKSUM(NEWID()))*5) + 1;  
     DECLARE @i INT = 1;
     WHILE @i <= @BookCount
     BEGIN
@@ -270,7 +270,7 @@ GO
 /* -----------------------
    7. PurchaseOrder
 -------------------------*/
--- 每個供應商 1–4 筆採購單
+
 DECLARE @SupplierID INT;
 DECLARE SupplierCursor CURSOR FOR
 SELECT SupplierID FROM dbo.Supplier;
@@ -316,3 +316,4 @@ SET TotalAmount = (
     WHERE sol.OrderID = so.OrderID
 )
 FROM dbo.SalesOrder so;
+
